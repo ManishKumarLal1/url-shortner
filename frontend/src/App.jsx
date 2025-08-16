@@ -10,7 +10,7 @@ export default function App() {
 
   const handleShorten = async (originalUrl) => {
     try {
-      const res = await fetch(`${import.meta.env.BASE_URL}/shorten`, {
+      const res = await fetch("https://url-shortner-iey5.onrender.com/shorten", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ originalUrl }),
