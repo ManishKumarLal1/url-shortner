@@ -10,7 +10,7 @@ export default function App() {
 
   const handleShorten = async (originalUrl) => {
     try {
-      const res = await fetch("http://localhost:5000/shorten", {
+      const res = await fetch(import.meta.env.BASE_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ originalUrl }),
